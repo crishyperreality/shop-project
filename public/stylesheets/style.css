@@ -1,0 +1,302 @@
+@font-face {
+  font-family: 'Amita';
+  src: url('../fonts/Amita/Amita-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Amita';
+  src: url('../fonts/Amita/Amita-Bold.ttf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Amatic SC';
+  src: url('../fonts/Amatic_SC/AmaticSC-Bold.ttf')
+}
+
+@font-face {
+  font-family: 'Cookie';
+  src: url('../fonts/Cookie/Cookie-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Khand';
+  src: url('../fonts/Khand/Khand-Regular.ttf');
+}
+
+@font-face{
+  font-family: 'Lobster Two';
+  src: url('../fonts/Lobster_Two/LobsterTwo-BoldItalic.ttf');
+}
+
+@font-face{
+  font-family: 'Open Sans Condensed';
+  src: url('../fonts/Open_Sans_Condensed/OpenSansCondensed-Light.ttf');
+}
+
+.bg{
+  background-color: #e7b9f0;
+  font-family: 'Open Sans Condensed';
+}
+
+
+.flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-transparent,
+.btn-transparent2,
+.btn-transparent3,
+.btn-transparent4,
+.btn-transparent5 {
+  background-color: rgba(203, 203, 203, 0.3);
+  font-family: 'Open Sans Condensed';
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 20px 5px 20px 5px;
+}
+
+.btn-transparent {
+  color: white;
+  border: solid 1px white;
+}
+
+.btn-transparent2 {
+  color: #3f62ff !important;
+  border: solid 1px #3f62ff !important;
+}
+
+.btn-transparent3 {
+  color: #7e16ba !important;
+  border: solid 1px #7e16ba !important;
+}
+
+.btn-transparent4 {
+  background-color:rgba(250, 250, 250, 0.4) !important;
+  color: #e63596 !important;
+  border: solid 1px #e63596 !important;
+}
+
+.btn-transparent5 {
+  color: #1b91a0 !important;
+  border: solid 1px #1b91a0 !important;
+}
+
+.section-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-title h1 {
+  font-family: 'Cookie';
+  font-size: 60px;
+  padding-top: 75px;
+}
+
+.form-bg {
+  background-color: white;
+}
+
+
+.button-group{
+  display: flex;
+}
+
+/* NAVBAR */
+.navbar-brand {
+  background-size: cover;
+  font-family: 'Amita';
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 3px;
+  padding-left: 50px;
+}
+
+.navbar-nav {
+  width: 85%;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-nav li {
+  padding: 0 5px 0 5px;
+  font-family: 'Open Sans Condensed';
+  letter-spacing: 2px;
+  text-transform: lowercase;
+  font-size: 20px;
+}
+
+/* CAROUSEL */
+.carousel-column {
+  height: 100%;
+}
+
+.carousel-bg {
+  background-color: #525252;
+}
+
+.carousel-opacity {
+  opacity: 0.7;
+}
+
+.carousel-caption {
+  height: 100%;
+  width: 70%;
+}
+
+.carousel-caption h1{
+  width: 50%;
+  font-family: 'Lobster Two';
+  font-size: 50px;
+}
+
+.h1b {
+  color: #d7b8ff;
+}
+
+
+/* SECCION1 */
+.warranties {
+  background-color: #ededef;
+  display: flex;
+  justify-content: center;
+}
+
+.warranties-content {
+  height: 100%;
+  width: 75%;
+}
+
+.warranties-icon{
+  width: 50px;
+  height: 50px;
+}
+
+.warranties-icon img {
+  width: 100%;
+}
+
+.warranties-text{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card{
+  border: 0;
+  height: 100%;
+  background-color: #fff8f8be;
+  text-align: center;
+  box-shadow: 3px 7px 10px rgba(41, 41, 41, 0.4);
+}
+
+.card a {
+  color:#292929;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px dotted #fffdf8;
+}
+
+
+.card-body h5 {
+  font-family: 'Khand';
+  font-size: 40px;
+  padding: 10px;
+}
+
+.card-body h6 {
+  font-style: italic;
+  font-size: 22px;
+  color: #743182;
+}
+
+.card-body p {
+  font-size: 20px;
+}
+
+
+/* REGISTER.EJS */
+.register-bg {
+  background-image: linear-gradient(#f9ecff, #bd55ed)
+}
+
+/* EDITSELLER.EJS */
+.edit-seller{
+  background-image: linear-gradient(lightblue, blue)
+}
+
+/* EDITPRODUCT.EJS */
+.edit-product{
+  background-image: linear-gradient(#ffecd0, #ffc56e);
+}
+.padding-form{
+  padding: 150px 0 250px 0;
+}
+
+
+
+/* FOOTER */
+
+.footer {
+  padding: 30px 10px 30px 10px !important;
+}
+.footer-bg {
+  background-color: #4b4b4b;
+  padding: 20px;
+}
+
+.footer-bg ul{
+  list-style: none;
+}
+
+.footer-bg li {
+  color: #e4e3e3dc;
+}
+
+.footer-bg {
+  font-family: 'Khand';
+  color: #b1b1b1;
+}
+
+@media (max-width: 992px){
+  /* CAROUSEL */
+  .carousel-item img{
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .carousel-caption h1 {
+    width: 80%;
+  }
+
+  .section-title {
+    text-align: center;
+  }
+
+
+  /* FOOTER */
+  .footer {
+    margin-top: 50px;
+  }
+
+}
+
+@media (max-width: 468px){
+  .form-fill{
+    background-color: white;
+  }
+}
+
+
+
+

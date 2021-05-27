@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Profile</title>
+
+</head>
+<body class="bg">
+    <%- include('navbar'); %>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-1 col-lg-4"></div>
+            <div class="col-10 col-lg-4">
+              <div class="card mt-5">
+                <a href="/profile/<%= resultSeller.id_seller %>">
+                  <div class="card-body">
+                    <img src="/sellersImages/<%= resultSeller.image %>" class="card-img-top" alt="...">
+                    <h5 class="card-title"><%= resultSeller.name %> <%= resultSeller.surname %></h5>
+                    <p><%= resultSeller.email %></p>
+                    <p class="card-text"><%= resultSeller.description %></p>
+                    <p><%= resultSeller.phone_number %></p>
+                    <div class="button-group">
+                    <a href="/editSeller/<%= resultSeller.id_seller %>" class="btn btn-transparent2 btn-light">Edit</a>
+                    <a href="/deleteSeller/<%= resultSeller.id_seller %>" class="btn btn-transparent3 btn-light">Delete</a>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-1 col-lg-4"></div>
+        </div>
+        <div class="row">
+          <div class="col-12 m-5">
+            <div class="dropdown">
+              <button class="btn btn-light btn-transparent4 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Add Product
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <form action="/products/saveProduct/<%= resultSeller.id_seller %>" method="post" enctype="multipart/form-data">
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="name" placeholder="Product name">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="description" placeholder="Product description">
+                  </div>
+                  <div class="form-group">
+                    <input type="file" name="avatar">
+                  </div>
+                  <button type="submit" class="btn btn-light btn-transparent4">Add</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 section-title">
+          <h1>Products from this seller</h1>
+        </div>
+      </div>
+      <div class="row">
+        <% resultProducts.forEach (function (product){ %>
+          <div class="card col-12 col-md-6 col-lg-4 mb-5">
+            <div class="card-body">
+              <a href="/"><img src="/productsImages/<%= product.image %>" class="card-img-top" alt="..."></a>
+              <a href="/profile/<%= product.id_seller %>"><h5 class="card-title"><%= product.name %> <%= product.surname %></h5></a>
+              <p class="card-text"><%= product.description %></p>
+              <div class="button-group">
+                <a href="/products/editProduct/<%= product.id_product %>" class="btn btn-light btn-transparent2">Edit</a>
+                <a href="/products/deleteProduct/<%= product.id_product %>" class="btn btn-light btn-transparent3">Delete</a>
+              </div>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+
+  <%- include('footer'); -%>
+
+
+    
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+crossorigin="anonymous"></script>
+</body>
+</html>
